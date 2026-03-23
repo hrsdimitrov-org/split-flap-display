@@ -1,16 +1,21 @@
+import clsx from "clsx";
+import styles from "./SplitFlap.module.css";
+
 interface SplitFlapProps {
   char: string;
+  nextChar: string;
   className?: string;
   "aria-label"?: string;
 }
 
-const SplitFlap = ({ char, className, "aria-label": ariaLabel }: SplitFlapProps) => {
+const SplitFlap = ({ char, nextChar, className, "aria-label": ariaLabel }: SplitFlapProps) => {
+
   return (
-    <div className={className} aria-label={ariaLabel}>
-      <div>{char}</div>
-      <div>{char}</div>
-      <div>{char}</div>
-      <div>{char}</div>
+    <div className={clsx(styles.flap, className)} aria-label={ariaLabel}>
+      <div className={styles.unfold_top}>{char}</div>
+      <div className={styles.unfold_bottom}>{char}</div>
+      <div className={styles.fold_top}>{nextChar}</div>
+      <div className={styles.fold_bottom}>{nextChar}</div>
     </div>
   );
 };

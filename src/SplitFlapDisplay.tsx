@@ -9,10 +9,10 @@ interface SplitFlapDisplayProps {
 const SplitFlapDisplay = ({ value, className, "aria-label": ariaLabel }: SplitFlapDisplayProps) => {
   return (
     <div className={className} role="text" aria-label={ariaLabel ?? value}>
-      <SplitFlap char="7" />
+      <SplitFlap char="7" nextChar="7" />
     </div>
   );
 };
 
 export { SplitFlapDisplay };
-export type { SplitFlapDisplayProps };;
+export type { SplitFlapDisplayProps };

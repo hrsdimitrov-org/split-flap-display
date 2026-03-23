@@ -1,0 +1,23 @@
+.flap {
+   display: inline-block;
+}
+
+.unfold_top {
+   position: absolute;
+   clip-path: inset(0 0 60% 0);
+}
+
+.unfold_bottom {
+   position: absolute;
+   clip-path: inset(0 0 60% 0);
+}
+
+.fold_top {
+   position: absolute;
+   clip-path: inset(45% 0 0 0);
+}
+
+.fold_bottom {
+   position: absolute;
+   clip-path: inset(45% 0 0 0);
+}
