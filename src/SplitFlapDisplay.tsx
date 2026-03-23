@@ -1,17 +1,18 @@
-export interface SplitFlapDisplayProps {
+import { SplitFlap } from "./SplitFlap";
+
+interface SplitFlapDisplayProps {
   value: string;
   className?: string;
   "aria-label"?: string;
 }
 
-export function SplitFlapDisplay({
-  value,
-  className,
-  "aria-label": ariaLabel
-}: SplitFlapDisplayProps) {
+const SplitFlapDisplay = ({ value, className, "aria-label": ariaLabel }: SplitFlapDisplayProps) => {
   return (
     <div className={className} role="text" aria-label={ariaLabel ?? value}>
-      <p>{value}</p>
+      <SplitFlap char="7" />
     </div>
   );
-}
+};
+
+export { SplitFlapDisplay };
+export type { SplitFlapDisplayProps };;
