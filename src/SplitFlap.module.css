@@ -2,31 +2,31 @@
    display: inline-block;
    width: 140px;
    height: 100%;
-   padding: 8px;
-  --clip-split: 50.5%;
+  --clip-split: 51%;
    background-color: black;
+   border-radius: 8px;
    position: relative;
 }
 
 .unfold_top, .unfold_bottom, .fold_top, .fold_bottom {
-   background-color: red;
+   background-color: #4a4e69;
+   color: #f2e9e4;
+   border-radius: 8px;
+   box-sizing: border-box;
 
    /* ensure constant position */
    position: absolute;
-   top: 0;
-   left: 0;
-
-   /* use up all available space */
-   width: 100%;
-   height: 100%;
+   --flap-border-size: 8px;
+   top: var(--flap-border-size);
+   left: var(--flap-border-size);
+   bottom: var(--flap-border-size);
+   right: var(--flap-border-size);
 
    /* since char height can be higher, center it using flexbox  */
    display: flex;
    justify-content: center;
    align-items: center;
    
-  /* crop from bottom using split point */
-  clip-path: inset(0 0 var(--clip-split) 0);
 }
 
 .unfold_bottom, .fold_bottom {
