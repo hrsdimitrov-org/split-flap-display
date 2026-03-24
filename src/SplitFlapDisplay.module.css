@@ -1,8 +1,10 @@
+@import "./theme.css";
+
 .flap_display {
     height: 200px;
     display: flex;
     gap: 8px;
-    background-color: #22223b;
+    background-color: var(--split-flap-color-panel-bg);
     padding: 14px;
     border-radius: 8px;
 }

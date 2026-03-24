@@ -1,8 +1,10 @@
+@import "./theme.css";
+
 .flap {
    display: inline-block;
    width: 140px;
    height: 100%;
-   background-color: black;
+  background-color: var(--split-flap-color-shell-bg);
    border-radius: 4px;
    position: relative;
 
@@ -10,8 +12,8 @@
 }
 
 .unfold_top, .unfold_bottom, .fold_top, .fold_bottom {
-   background-color: #4a4e69;
-   color: #f2e9e4;
+  background-color: var(--split-flap-color-panel-bg);
+  color: var(--split-flap-color-text);
    border-radius: 4px;
 
    /* ensure constant position */
