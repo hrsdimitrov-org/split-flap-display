@@ -43,25 +43,25 @@ const SplitFlap = ({ char, nextChar, className, "aria-label": ariaLabel }: Split
   return (
     <div className={clsx(styles.flap, className)} aria-label={ariaLabel}>
       <div className={styles.unfold_top}>
-        <div className={styles.unfold_top_textbox}>
+        <div className={styles.unfold_top_text_offset}>
           <div ref={unfoldTopRef}>{char}</div>
         </div>
       </div>
 
       <div className={styles.unfold_bottom}>
-        <div className={styles.unfold_bottom_textbox}>
+        <div className={styles.unfold_bottom_text_offset}>
           <div ref={unfoldBottomRef} className={styles.char}>{char}</div>
         </div>
       </div>
 
       <div className={styles.fold_top}>
-        <div className={styles.fold_top_textbox}>
+        <div className={styles.fold_top_text_offset}>
           <div ref={foldTopRef} className={styles.char}>{nextChar}</div>
         </div>
       </div>
 
       <div className={styles.fold_bottom}>
-        <div className={styles.fold_bottom_textbox}>
+        <div className={styles.fold_bottom_text_offset}>
           <div ref={foldBottomRef} className={styles.char}>{nextChar}</div>
         </div>
       </div>

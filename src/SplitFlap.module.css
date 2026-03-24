@@ -32,7 +32,7 @@
   clip-path: inset(0 0 var(--clip-split) 0);
 }
 
-.unfold_top_textbox, .unfold_bottom_textbox, .fold_top_textbox, .fold_bottom_textbox {
+.unfold_top_text_offset, .unfold_bottom_text_offset, .fold_top_text_offset, .fold_bottom_text_offset {
    /* ensure constant position */
    position: absolute;
    --flap-text-offset: 10%;
