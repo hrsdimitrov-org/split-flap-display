@@ -2,17 +2,17 @@
    display: inline-block;
    width: 140px;
    height: 100%;
-  --clip-split: 51%;
    background-color: black;
-   border-radius: 8px;
+   border-radius: 4px;
    position: relative;
+
+   --clip-split: 51%;
 }
 
 .unfold_top, .unfold_bottom, .fold_top, .fold_bottom {
    background-color: #4a4e69;
    color: #f2e9e4;
-   border-radius: 8px;
-   box-sizing: border-box;
+   border-radius: 4px;
 
    /* ensure constant position */
    position: absolute;
@@ -21,13 +21,8 @@
    left: var(--flap-border-size);
    bottom: var(--flap-border-size);
    right: var(--flap-border-size);
-
-   /* since char height can be higher, center it using flexbox  */
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   
 }
+
 
 .unfold_bottom, .fold_bottom {
   clip-path: inset(var(--clip-split) 0 0 0);
@@ -36,6 +31,22 @@
 .unfold_top, .fold_top {
   clip-path: inset(0 0 var(--clip-split) 0);
 }
+
+.unfold_top_textbox, .unfold_bottom_textbox, .fold_top_textbox, .fold_bottom_textbox {
+   /* ensure constant position */
+   position: absolute;
+   --flap-text-offset: 10%;
+   top: var(--flap-text-offset);
+   left: var(--flap-text-offset);
+   bottom: var(--flap-text-offset);
+   right: var(--flap-text-offset);
+
+   /* since char height can be higher, center it using flexbox  */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
 
 .char {
    display: inline-block;

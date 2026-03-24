@@ -12,11 +12,9 @@ const SplitFlapDisplay = ({ value, className, "aria-label": ariaLabel }: SplitFl
   return (
     <div className={clsx(styles.flap_display, className)} role="text" aria-label={ariaLabel ?? value}>
       <SplitFlap char="H" nextChar="H" />
-      <SplitFlap char="E" nextChar="E" />
-      <SplitFlap char="L" nextChar="L" />
-      <SplitFlap char="L" nextChar="L" />
-      <SplitFlap char="O" nextChar="O" />
-
+      <SplitFlap char="R" nextChar="R" />
+      <SplitFlap char="I" nextChar="I" />
+      <SplitFlap char="S" nextChar="S" />
     </div>
   );
 };
