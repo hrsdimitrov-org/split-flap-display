@@ -16,7 +16,7 @@
 
    /* ensure constant position */
    position: absolute;
-   --flap-border-size: 8px;
+   --flap-border-size: 5%;
    top: var(--flap-border-size);
    left: var(--flap-border-size);
    bottom: var(--flap-border-size);
@@ -35,4 +35,9 @@
 
 .unfold_top, .fold_top {
   clip-path: inset(0 0 var(--clip-split) 0);
+}
+
+.char {
+   display: inline-block;
+   white-space: nowrap;
 }
