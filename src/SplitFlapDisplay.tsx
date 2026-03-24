@@ -11,7 +11,7 @@ interface SplitFlapDisplayProps {
 const SplitFlapDisplay = ({ value, className, "aria-label": ariaLabel }: SplitFlapDisplayProps) => {
   return (
     <div className={clsx(styles.flap_display, className)} role="text" aria-label={ariaLabel ?? value}>
-      <SplitFlap char="A" nextChar="B" />
+      <SplitFlap char="A" nextChar="3" />
     </div>
   );
 };
