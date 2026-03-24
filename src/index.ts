@@ -1,5 +1,5 @@
-export { SplitFlapDisplay } from "./SplitFlapDisplay";
-export { SplitFlap } from "./SplitFlap";
+export { SplitFlapDisplay } from "./components/SplitFlapDisplay";
+export { SplitFlap } from "./components/SplitFlap";
 
-export type { SplitFlapDisplayProps } from "./SplitFlapDisplay";
-export type { SplitFlapProps } from "./SplitFlap";
+export type { SplitFlapDisplayProps } from "./components/SplitFlapDisplay";
+export type { SplitFlapProps } from "./components/SplitFlap";

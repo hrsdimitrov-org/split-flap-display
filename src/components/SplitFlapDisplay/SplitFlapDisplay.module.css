@@ -1,4 +1,4 @@
-@import "./theme.css";
+@import "../../styles/theme.css";
 
 .flap_display {
     height: 200px;
@@ -7,4 +7,5 @@
     background-color: var(--split-flap-color-panel-bg);
     padding: 14px;
     border-radius: 8px;
+    user-select: none;
 }
