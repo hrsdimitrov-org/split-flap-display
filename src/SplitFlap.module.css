@@ -1,23 +1,37 @@
 .flap {
    display: inline-block;
+   width: 140px;
+   height: 100%;
+   padding: 8px;
+   /* background-color: black; */
+   position: relative;
 }
 
-.unfold_top {
+.unfold_top, .unfold_bottom, .fold_top, .fold_bottom {
+   background-color: red;
+
+   /* ensure constant position */
    position: absolute;
-   clip-path: inset(0 0 60% 0);
+   top: 0;
+   left: 0;
+
+   /* use up all available space */
+   width: 100%;
+   height: 100%;
+
+   /* since char height can be higher, center it using flexbox  */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   /* crop 55 percent from bottom */
+   clip-path: inset(0 0 55% 0); 
 }
 
-.unfold_bottom {
-   position: absolute;
-   clip-path: inset(0 0 60% 0);
+.unfold_bottom, .fold_bottom {
+   clip-path: inset(55% 0 0 0);
 }
 
-.fold_top {
-   position: absolute;
-   clip-path: inset(45% 0 0 0);
-}
-
-.fold_bottom {
-   position: absolute;
-   clip-path: inset(45% 0 0 0);
+.unfold_top, .fold_top {
+   clip-path: inset(0 0 55% 0);
 }

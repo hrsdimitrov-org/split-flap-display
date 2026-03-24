@@ -1,4 +1,6 @@
 import { SplitFlap } from "./SplitFlap";
+import clsx from "clsx";
+import styles from "./SplitFlapDisplay.module.css";
 
 interface SplitFlapDisplayProps {
   value: string;
@@ -8,8 +10,8 @@ interface SplitFlapDisplayProps {
 
 const SplitFlapDisplay = ({ value, className, "aria-label": ariaLabel }: SplitFlapDisplayProps) => {
   return (
-    <div className={className} role="text" aria-label={ariaLabel ?? value}>
-      <SplitFlap char="7" nextChar="7" />
+    <div className={clsx(styles.flap_display, className)} role="text" aria-label={ariaLabel ?? value}>
+      <SplitFlap char="A" nextChar="B" />
     </div>
   );
 };
