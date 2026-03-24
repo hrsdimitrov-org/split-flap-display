@@ -3,6 +3,7 @@
    width: 140px;
    height: 100%;
    padding: 8px;
+  --clip-split: 50.5%;
    /* background-color: black; */
    position: relative;
 }
@@ -24,14 +25,14 @@
    justify-content: center;
    align-items: center;
    
-   /* crop 55 percent from bottom */
-   clip-path: inset(0 0 55% 0); 
+  /* crop from bottom using split point */
+  clip-path: inset(0 0 var(--clip-split) 0);
 }
 
 .unfold_bottom, .fold_bottom {
-   clip-path: inset(55% 0 0 0);
+  clip-path: inset(var(--clip-split) 0 0 0);
 }
 
 .unfold_top, .fold_top {
-   clip-path: inset(0 0 55% 0);
+  clip-path: inset(0 0 var(--clip-split) 0);
 }
