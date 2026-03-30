@@ -64,27 +64,28 @@ const SplitFlap = ({ char, nextChar, className, "aria-label": ariaLabel }: Split
 
   return (
     <div className={clsx(styles.flap, className)} aria-label={ariaLabel}>
+
       <motion.div className={styles.top_first} variants={topVariants} animate={topFirstControls} initial="flat">
         <div className={styles.top_first_text_offset}>
-          <div ref={unfoldTopRef}>{char}</div>
+          <div ref={unfoldTopRef} className={styles.char}>{char}</div>
         </div>
       </motion.div>
 
       <motion.div className={styles.top_second} variants={topVariants} animate={topSecondControls} initial="flat">
-        <div className={styles.fold_top_text_offset}>
+        <div className={styles.top_second_text_offset}>
           <div ref={foldTopRef} className={styles.char}>{nextChar}</div>
-        </div>
-      </motion.div>
-
-      <motion.div className={styles.bottom_first} variants={bottomVariants} animate={bottomFirstControls} initial="flat">
-        <div className={styles.bottom_first_text_offset}>
-          <div ref={unfoldBottomRef} className={styles.char}>{char}</div>
         </div>
       </motion.div>
 
       <motion.div className={styles.bottom_second} variants={bottomVariants} animate={bottomSecondControls} initial="flat">
         <div className={styles.bottom_second_text_offset}>
           <div ref={foldBottomRef} className={styles.char}>{nextChar}</div>
+        </div>
+      </motion.div>
+
+      <motion.div className={styles.bottom_first} variants={bottomVariants} animate={bottomFirstControls} initial="flat">
+        <div className={styles.bottom_first_text_offset}>
+          <div ref={unfoldBottomRef} className={styles.char}>{char}</div>
         </div>
       </motion.div>
     </div>
