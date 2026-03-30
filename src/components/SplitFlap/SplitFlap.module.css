@@ -4,14 +4,14 @@
    display: inline-block;
    width: 140px;
    height: 100%;
-  background-color: var(--split-flap-color-shell-bg);
+   background-color: var(--split-flap-color-shell-bg);
    border-radius: 4px;
    position: relative;
 
    --clip-split: 51%;
 }
 
-.unfold_top, .unfold_bottom, .fold_top, .fold_bottom {
+.top_first, .top_second, .bottom_first, .bottom_second {
   background-color: var(--split-flap-color-panel-bg);
   color: var(--split-flap-color-text);
    border-radius: 4px;
@@ -26,15 +26,15 @@
 }
 
 
-.unfold_bottom, .fold_bottom {
+.bottom_first, .bottom_second {
   clip-path: inset(var(--clip-split) 0 0 0);
 }
 
-.unfold_top, .fold_top {
+.top_first, .top_second {
   clip-path: inset(0 0 var(--clip-split) 0);
 }
 
-.unfold_top_text_offset, .unfold_bottom_text_offset, .fold_top_text_offset, .fold_bottom_text_offset {
+.top_first_text_offset, .top_second_text_offset, .bottom_first_text_offset, .bottom_second_text_offset {
    /* ensure constant position */
    position: absolute;
    --flap-text-offset: 10%;

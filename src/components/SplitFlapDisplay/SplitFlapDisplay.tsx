@@ -18,7 +18,6 @@ const SplitFlapDisplay = ({ value, className, "aria-label": ariaLabel }: SplitFl
       <SplitFlap char="O" nextChar="O" />
       <SplitFlap char="M" nextChar="M" />
       <SplitFlap char="E" nextChar="E" />
-
     </div>
   );
 };
